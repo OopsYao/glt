@@ -30,10 +30,19 @@
 
 }
 
+% maketitle automatically
+\let\olddocument\document
+\let\oldenddocument\enddocument
+\renewenvironment{document}{%
+    \olddocument
+    \maketitle
+}{\oldenddocument} 
+
+% Math symbols
 \newcommand\diff{%
     \mathrm d
 }
 
-\newcommand\expp{%
+\newcommand\e{%
     \mathrm e
 }

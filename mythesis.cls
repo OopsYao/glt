@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{mythesis}
-\LoadClass[12pt,a4paper]{ctexart}
+\LoadClass[a4paper,12pt]{ctexart}
 
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
@@ -18,9 +18,15 @@
 
 \date{}
 
+\providecommand{\keywords}[1]{%
+    \small	
+    \textbf{关键词}\quad #1
+}
+
+% Math symbols
 \newcommand\diff{%
     \mathrm d
 }
-\newcommand\expp{%
+\newcommand\e{%
     \mathrm e
 }
