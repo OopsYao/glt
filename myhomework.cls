@@ -30,6 +30,12 @@
 
 }
 
+% Using sensitive information
+\InputIfFileExists{.secret}{}{}
+\ifx\myname\undefined
+    \def\myname{}
+\fi
+
 % maketitle automatically
 \let\olddocument\document
 \let\oldenddocument\enddocument
